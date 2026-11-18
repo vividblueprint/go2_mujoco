@@ -1,7 +1,43 @@
+<div align="center">
+
+<h1 align="center" >
+
+<img width="25px" src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<img width="25px" src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<img width="25px" src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<b>GO2 MUJOCO</b>
+<img width="25px" src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<img width="25px" src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+<img width="25px" src="https://em-content.zobj.net/source/microsoft-teams/337/heart-with-ribbon_1f49d.png"/>
+
+</h1>
+
+[![GitHub](https://img.shields.io/badge/GitHub-vividblueprint-181717?logo=github&logoColor=white)](https://github.com/vividblueprint)
+[![Issues](https://img.shields.io/github/issues/vividblueprint/go2_mujoco?style=flat)](https://github.com/vividblueprint/go2_mujoco/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/vividblueprint/go2_mujoco?style=flat)](https://github.com/vividblueprint/go2_mujoco/pulls)
+[![Contributors](https://img.shields.io/github/contributors/vividblueprint/go2_mujoco?style=flat)](https://github.com/vividblueprint/go2_mujoco/graphs/contributors)
+[![Stars](https://img.shields.io/github/stars/vividblueprint/go2_mujoco?style=flat)](https://github.com/vividblueprint/go2_mujoco/stargazers)
+[![Forks](https://img.shields.io/github/forks/vividblueprint/go2_mujoco?style=flat)](https://github.com/vividblueprint/go2_mujoco/forks)
+[![Watchers](https://img.shields.io/github/watchers/vividblueprint/go2_mujoco?style=flat)](https://github.com/vividblueprint/go2_mujoco/watchers)
+[![Last Commit](https://img.shields.io/github/last-commit/vividblueprint/go2_mujoco?style=flat)](https://github.com/vividblueprint/go2_mujoco/commits)
+[![Monthly Commits](https://img.shields.io/github/commit-activity/m/vividblueprint/go2_mujoco?style=flat)](https://github.com/vividblueprint/go2_mujoco/commits)
+[![Languages](https://img.shields.io/github/languages/count/vividblueprint/go2_mujoco?style=flat)](https://github.com/vividblueprint/go2_mujoco)
+[![Code Size](https://img.shields.io/github/languages/code-size/vividblueprint/go2_mujoco?style=flat)](https://github.com/vividblueprint/go2_mujoco)
+[![Repo Size](https://img.shields.io/github/repo-size/vividblueprint/go2_mujoco?style=flat)](https://github.com/vividblueprint/go2_mujoco)
+[![Total Commits](https://img.shields.io/github/commit-activity/t/vividblueprint/go2_mujoco?style=flat&label=Total%20Commits)](https://github.com/vividblueprint/go2_mujoco/commits)
+[![Files](https://img.shields.io/github/directory-file-count/vividblueprint/go2_mujoco?type=file&style=flat)](https://github.com/vividblueprint/go2_mujoco/tree/HEAD)
+[![License](https://img.shields.io/github/license/vividblueprint/go2_mujoco?style=flat)](https://github.com/vividblueprint/go2_mujoco/blob/HEAD/LICENSE)
+
+</div>
+
 # go2_mujoco
 
 Standalone Go2 MuJoCo simulator with keyboard controls, local robot assets, and
 `unitree_sdk2_go2`. Uses **Python 3.11** and **CycloneDDS 11.1.0**.
+
+### Full sim2sim/sim2real
+
+For simple deployment check: [go2_deploy_simple](https://github.com/vividblueprint/go2_deploy_simple)
 
 ## Install
 
@@ -17,7 +53,10 @@ sudo apt install -y libgl1 libglfw3
 Install the Python dependencies:
 
 ```bash
-cd /home/shamim/playground/unitree_go2/shamim/go2_mujoco
+# make a directory
+mkdir ~/unitree_go2
+cd ~/unitree_go2/go2_mujoco
+
 uv venv --allow-existing --python 3.11 .venv
 uv pip install --python .venv/bin/python \
   --only-binary cyclonedds --reinstall-package cyclonedds \
@@ -30,14 +69,14 @@ script, application `.toml`, or lockfile is needed.
 ## Run
 
 ```bash
-cd /home/shamim/playground/unitree_go2/shamim/go2_mujoco
+cd ~/unitree_go2/go2_mujoco
 .venv/bin/python simulate.py
 ```
 
 In a second terminal, start the installed policy controller:
 
 ```bash
-cd /home/shamim/playground/unitree_go2/shamim/go2_deploy_simple
+cd ~/unitree_go2/go2_deploy_simple
 .venv/bin/python deploy.py --policy ts
 ```
 
